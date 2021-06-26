@@ -1,5 +1,5 @@
 package question2;
-
+import static java.lang.Integer.parseInt;
 
 /**
  * Décrivez votre classe FahrenheitCelsius ici.
@@ -16,8 +16,14 @@ public class FahrenheitCelsius{
       */
      public static void main(String[] args){
        try{
+             System.out.print('\u000C');
        
-      
+              for (String x : args) {
+                float celsius = FahrenheitCelsius.fahrenheitEnCelsius(parseInt(x));
+                System.out.println(x + "\u00B0F -> " + celsius + "\u00B0C"); // ligne,
+                // format
+                // impos?s
+            }
        }catch(NumberFormatException nfe){
            System.out.println("error : " + nfe.getMessage());  // en cas d'erreur 
        }
@@ -31,8 +37,7 @@ public class FahrenheitCelsius{
       */
      public static float fahrenheitEnCelsius( int f){
        // ...
-       return 0.F;	// à compléter	en remplaçant la valeur retournée par la fonction de conversion
-       // ...
+       return ((int) (((f - 32) * 5 / 9.F) * 10)) / 10.F;
      }
 
 }
