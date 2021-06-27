@@ -1,4 +1,5 @@
 package question1;
+import static java.lang.Integer.parseInt; 
 
 /**
  * Décrivez votre classe FahrenheitCelsius ici.
@@ -16,11 +17,15 @@ public class FahrenheitCelsius {
      *            ...
      */
     public static void main(String[] args) {
-        // pour tous les paramètres de la ligne de commande
-        int fahrenheit = 0;
-        float celsius = 0;
-        System.out.println(fahrenheit + "\u00B0F -> " + celsius + "\u00B0C"); // ligne,
-                                                                                // format
+       System.out.print('\u000C');// to clear the terminal window
+        // pour tous les param?tres de la ligne de commande
+        for (String x : args) 
+        {
+            float celsius = FahrenheitCelsius.fahrenheitEnCelsius(parseInt(x));
+            System.out.println(x + "\u00B0F -> " +celsius + "\u00B0C"); // ligne,
+                                                                        // format
+                                                                        // impos?s
+        }                                                                                       // format
                                                                                 // imposés
                                                                                 
     }
