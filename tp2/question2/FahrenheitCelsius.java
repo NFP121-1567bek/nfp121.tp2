@@ -18,11 +18,12 @@ public class FahrenheitCelsius{
    
        
               for (String x : args) {
-                float celsius = FahrenheitCelsius.fahrenheitEnCelsius(parseInt(x));
+              
+                    try{
+                 float celsius = FahrenheitCelsius.fahrenheitEnCelsius(parseInt(x));
                 System.out.println(x + "\u00B0F -> " + celsius + "\u00B0C"); // ligne,
                 // format
-                    try{
-             System.out.print('\u000C');
+                System.out.print('\u000C');
                 // impos?s
             }
             catch(NumberFormatException nfe){
